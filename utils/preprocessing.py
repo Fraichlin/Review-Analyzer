@@ -29,7 +29,7 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('stopwords')
-import en_core_web_sm
+#import en_core_web_sm
 
 import pickle
 from textblob import TextBlob
