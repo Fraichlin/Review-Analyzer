@@ -15,21 +15,13 @@ import contractions
 from spacy.lang.en.stop_words import STOP_WORDS
 import pip
 
-def install(package):
-    if hasattr(pip, 'main'):
-        pip.main(['install', package])
-    else:
-        pip._internal.main(['install', package])
-
-install("spacy download en_core_web_sm")
-
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('stopwords')
-#import en_core_web_sm
+import en_core_web_sm
 
 import pickle
 from textblob import TextBlob
