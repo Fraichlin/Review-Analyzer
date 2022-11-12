@@ -8,4 +8,4 @@ spacy==3.4.3
 streamlit==1.14.1
 textblob==0.17.1
 wordcloud==1.8.2.2
-en_core_web_sm
+spacy download en_core_web_sm
