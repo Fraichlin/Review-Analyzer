@@ -6,17 +6,22 @@ import sys
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
-
 from wordcloud import WordCloud
-
 import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import contractions
 from spacy.lang.en.stop_words import STOP_WORDS
+import pip
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "spacy download en_core_web_sm"])
+def install(package):
+    if hasattr(pip, 'main'):
+        pip.main(['install', package])
+    else:
+        pip._internal.main(['install', package])
+
+install("spacy download en_core_web_sm")
 
 import nltk
 nltk.download('punkt')
