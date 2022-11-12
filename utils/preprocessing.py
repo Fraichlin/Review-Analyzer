@@ -14,6 +14,7 @@ from nltk.corpus import stopwords
 import contractions
 import os
 from spacy.lang.en.stop_words import STOP_WORDS
+import spacy
 os.system("python3 -m spacy download en_core_web_sm")  
 import en_core_web_sm
 import nltk
