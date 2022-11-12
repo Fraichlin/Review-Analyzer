@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import subprocess
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,12 +16,15 @@ from nltk.corpus import stopwords
 import contractions
 from spacy.lang.en.stop_words import STOP_WORDS
 
+subprocess.check_call([sys.executable, "-m", "pip", "install", "spacy download en_core_web_sm"])
+
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('stopwords')
+import en_core_web_sm
 
 import pickle
 from textblob import TextBlob
@@ -32,7 +36,7 @@ tokenizer = RegexpTokenizer(r'\w+')
 def tokenize_text(text):
     text_processed = " ".join(tokenizer.tokenize(text))
     return text_processed
-import en_core_web_sm
+
 
 nlp = en_core_web_sm.load(disable=['parser', 'tagger', 'ner'])
 
