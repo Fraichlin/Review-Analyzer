@@ -12,16 +12,17 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import contractions
+import os
 from spacy.lang.en.stop_words import STOP_WORDS
-import pip
-
+os.system("python3 -m spacy download en_core_web_sm")  
+import en_core_web_sm
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('stopwords')
-import en_core_web_sm
+
 
 import pickle
 from textblob import TextBlob
