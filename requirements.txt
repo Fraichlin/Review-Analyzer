@@ -8,4 +8,5 @@ spacy
 streamlit
 textblob
 wordcloud
-"spacy download en_core_web_sm"
+pip3 install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz --user
+
