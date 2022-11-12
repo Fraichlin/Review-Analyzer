@@ -14,8 +14,8 @@ from nltk.corpus import stopwords
 import contractions
 import os
 from spacy.lang.en.stop_words import STOP_WORDS
-import spacy 
-import en_core_web_sm
+import spacy
+
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -36,7 +36,7 @@ def tokenize_text(text):
     return text_processed
 
 
-nlp = en_core_web_sm.load(disable=['parser', 'tagger', 'ner'])
+
 
 lemmatizer = WordNetLemmatizer()
 
