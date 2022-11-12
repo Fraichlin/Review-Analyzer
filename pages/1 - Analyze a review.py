@@ -27,7 +27,7 @@ topic_labels = {
     14 : 'overall score'
 }
 
-with open(r"./utils/model_loic.", "rb") as input_file:
+with open(r"./utils/model_loic", "rb") as input_file:
   model = pickle.load(input_file)
 
 with open(r"./utils/vectorizer_loic", "rb") as input_file:
